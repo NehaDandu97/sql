@@ -1,1 +1,141 @@
 
+-- create database college;
+-- use college;
+-- create table student(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null,
+-- marks float
+-- );
+-- insert into student values(1,"xx",18,19.5);
+-- insert into student (id,name,age,marks) values 
+-- (2,"yyy",18,19.0),
+-- (3,"zzz",19,18),
+-- (4,"aaa",18,18.75);
+
+-- select * from student;
+
+
+-- create table employee_info (
+-- id int primary key,
+-- name varchar(50),
+-- Salary int);
+
+-- insert into employee_info (id,name,salary) values
+-- (1,"neha",10000000),
+-- (2,"chethu",20000000),
+-- (3,"bhavani",30000000);
+
+-- select * from employee_info;
+
+
+-- constraints
+
+-- create table temp1 (
+-- id int unique);
+
+-- insert into temp1 values(101);
+-- insert into temp1 values();
+-- insert into temp1 values(103);
+-- select * from temp1;
+
+
+-- create table temp1 (
+-- id int not null);
+
+-- insert into temp1 values(101);
+-- insert into temp1 values(103);
+
+-- select * from temp1;
+
+
+-- create table pk(
+-- id int,
+-- name varchar(50),
+-- age int,
+-- primary key(id));
+
+-- insert into pk values(101,"xxx",12);
+-- insert into pk values(102,"xxx",12);
+-- insert into pk values(103,"xxx",12);
+
+-- select * from pk;
+
+-- create table pk2(
+-- id int,
+-- name varchar(50),
+-- age int,
+-- primary key(id,name));
+
+-- insert into pk2 values(101,"xxx",12);
+-- insert into pk2 values(101,"yyy",12);
+-- insert into pk2 values(103,"xxx",12);
+
+-- select * from pk2;
+
+-- create table fk(
+-- cust_id int,
+-- foreign key(cust_id) references customer(id)
+-- );
+
+-- create table employee_info (
+-- id int primary key,
+-- name varchar(50),
+-- Salary int default 2500000);
+
+-- insert into employee_info (id,name) values
+-- (1,"neha"),
+-- (2,"chethu"),
+-- (3,"bhavani");
+
+-- select * from employee_info;
+
+
+-- create table city(
+-- id int primary key,
+-- city varchar(50),
+-- age int check (age>=18)
+-- );
+
+-- insert into city (id,city,age) values
+-- (101,'delhi',18),
+-- (103,'hyd',19);
+
+-- select * from city;
+
+-- CREATE TABLE Students (
+--     id INT PRIMARY KEY,
+--     name VARCHAR(100) NOT NULL,
+--     age INT CHECK (age >= 18),  
+--     grade CHAR(1) CHECK (grade IN ('A', 'B', 'C', 'D', 'F'))  
+-- );
+
+
+-- INSERT INTO Students (id, name, age, grade) VALUES (1, 'Alice', 20, 'F');  
+
+-- SELECT * FROM Students;
+
+
+-- create database college;
+-- use college;
+
+create table student(
+rollno int primary key,
+name varchar(50),
+marks int not null,
+grade varchar(50),
+city varchar(20)
+);
+
+insert into student(rollno,name,marks,grade,city) values
+(1,"neha",99,'A',"hyd"),
+(2,"chethu",98,'A',"delhi"),
+(3,"bhav",89,'B',"chennai"),
+(4,"sai",79,'C',"pune");
+
+select rollno,name,city from student;
+
+-- select * from student;
+
+
+
