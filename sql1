@@ -20,8 +20,6 @@
 
 -- select * from students;
 
-
-
 -- create database college_iare;
 -- create database if not exists iare;
 
@@ -30,7 +28,6 @@
 -- show college_iare;
 
 -- show students;
-
 
 -- create table students(
 -- id int primary key,
@@ -181,6 +178,229 @@
 
 -- select * from students
 -- where marks!=98;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null,
+-- city varchar(20),
+-- marks int
+-- );
+
+-- insert into students (id,name,age,city,marks) values
+-- (1,"neha",20,"hyb",99),
+-- (2,"chethu",20,"hyb",98),
+-- (3,"bhav",22,"banglore",92),
+-- (4,"ferhat",32,"bolu",88);
+
+-- insert into students values (5,"asli",30,"bolu",92);
+
+-- select * from students
+-- where age=20 and city='hyb';
+
+-- select * from students
+-- where age=20 or city='bolu';
+
+-- select * from students
+-- where age between 22 and 32;
+
+-- select * from students
+-- where city in ('hyb','bolu');
+
+-- select * from students
+-- where city not in ('bolu');
+
+-- select * from students
+-- where marks > all(select marks from students where city='bolu');
+
+-- select * from students
+-- where marks > any(select marks from students where city='bolu');
+
+-- select * from students
+-- where name like "n%";
+
+-- select id,name from students
+-- limit 3;
+
+-- select * from students
+-- where city='bolu'
+-- limit 3;
+
+-- select * from students
+-- limit 2 offset 2;
+
+-- select id,name,marks from students
+-- where marks>90
+-- limit 4;
+
+-- select id,name,marks from students
+-- where marks>92
+-- limit 4;
+
+-- select id,name,age from students
+-- where age>22
+-- limit 2 offset 1;
+
+
+-- select id,name from students
+-- order by name asc;
+
+-- select id,name from students
+-- order by name desc;
+
+-- select id,name from students
+-- order by name asc
+-- limit 3;
+
+-- select count(name) from students;
+
+-- select max(age) from students;
+
+-- select min(age) from students;
+
+-- select sum(marks) from students;
+
+-- select avg(marks) from students;
+
+
+-- select city,count(id)
+-- from students
+-- group by city;
+
+-- select city,count(id)
+-- from students
+-- group by city
+-- order by count(id) desc;
+
+-- select city,count(id)
+-- from students
+-- group by city
+-- having max(marks)>90;
+
+-- select city,count(id)
+-- from students
+-- group by city
+-- having min(marks)>90;
+
+-- select city
+-- from students
+-- where age>20
+-- group by city 
+-- having max(marks)>90
+-- order by city asc;
+
+-- update students
+-- set age=21
+-- where age=20;
+
+-- update students
+-- set age=21
+-- where name='neha';
+
+-- update students
+-- set age=age+1;
+
+
+-- delete from students
+-- where marks<90;
+
+-- delete from students;
+
+-- desc students;
+
+-- select * from students;
+
+-- alter table students
+-- add column clg varchar(20);
+
+-- alter table students
+-- drop column age;
+
+-- select * from students;
+
+-- alter table students
+-- rename to students_details;
+
+-- show tables;
+
+-- alter table students
+-- change column marks score int ;
+-- select * from students;
+
+-- alter table students
+-- modify marks float ;
+-- desc students
+
+-- truncate table students;
+-- desc students;
+
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50)
+-- );
+
+-- insert into students (id,name) values
+-- (1,"neha"),
+-- (2,"chethu"),
+-- (3,"bhav"),
+-- (4,"ferhat");
+
+-- insert into students values (5,"asli");
+
+-- create table course(
+-- id int primary key,
+-- course_name varchar(50)
+-- );
+
+-- insert into course (id,course_name) values
+-- (2,"bcom"),
+-- (3,"btech"),
+-- (6,"mba");
+
+-- select * from students
+-- inner join course
+-- on students.id=course.id;
+
+-- select * from students as s
+-- inner join course as c
+-- on s.id=c.id;
+
+-- select * from students
+-- left join course
+-- on students.id=course.id;
+
+-- select * from students as s
+-- right join course as c
+-- on s.id=c.id;
+
+-- select * from students
+-- left join course
+-- on students.id=course.id
+-- union
+-- select * from students
+-- right join course
+-- on students.id=course.id;
+
+-- select * from students as s1
+-- join students as s2
+-- on s1.id=s2.id;
+
+-- select id from students
+-- union
+-- select id from course;
+
+-- select name from students
+-- union
+-- select course_name from course;
+
+-- select id from students
+-- union all
+-- select id from course;
+
+
+
+
 
 
 
