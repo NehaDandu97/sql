@@ -1,0 +1,189 @@
+-- create database college_iare;
+-- create database iare;
+-- drop database iare;
+-- use college_iare;
+-- show college_iare;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null
+-- );
+
+-- insert into students (id,name,age) values
+-- (1,"neha",20),
+-- (2,"chethu",20),
+-- (3,"bhav",22),
+-- (4,"ferhat",32);
+
+-- insert into students values (5,"asli",30);
+
+-- select * from students;
+
+
+
+-- create database college_iare;
+-- create database if not exists iare;
+
+-- drop database if exists iare;
+
+-- show college_iare;
+
+-- show students;
+
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null
+-- );
+
+-- desc students;
+
+-- insert into students (id,name,age) values 
+-- (101,"xxx",20),
+-- (102,"yyyy",21),
+-- (103,"zzz",22),
+-- (104,"aaa",25);
+
+-- insert into students values(105,"bbb",24);
+
+-- select * from students;
+
+-- select id,name from students;
+
+-- create table students(
+-- id int,
+-- name varchar(50),
+-- age int not null,
+-- primary key (id,name)
+-- );
+
+-- insert into students (id,name,age) values
+-- (1,"neha",20),
+-- (1,"dandu",20),
+-- (2,"dandu",20),
+-- (2,"chethu",20),
+-- (3,"bhav",22),
+-- (4,"ferhat",32);
+
+-- insert into students values (5,"asli",30);
+
+-- select * from students;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null
+-- );
+
+-- insert into students (id,name,age) values
+-- (1,"neha",20),
+-- (2,"chethu",20),
+-- (3,"bhav",22),
+-- (4,"ferhat",32);
+
+-- insert into students values (5,"asli",30);
+
+-- create table toppers(
+-- toppers_id int,
+-- foreign key(toppers_id) references students(id));
+
+-- insert into toppers(toppers_id) values(1),(3);
+
+-- select * from toppers;
+
+-- select * from students;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null,
+-- col_name varchar(20) default "iare"
+-- );
+
+-- insert into students (id,name,age) values
+-- (1,"neha",20),
+-- (3,"bhav",22),
+-- (4,"ferhat",32);
+
+-- insert into students (id,name,age,col_name) values (2,"chethu",20,"bvrit");
+
+-- insert into students values (5,"asli",30,default);
+
+-- select * from students;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null check (age between 20 and 32)
+-- );
+
+-- insert into students (id,name,age) values
+-- (1,"neha",20),
+-- (2,"chethu",20),
+-- (3,"bhav",22),
+-- (4,"ferhat",32);
+
+-- insert into students values (5,"asli",30);
+
+-- select * from students;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null,
+-- city varchar(20)
+-- );
+
+-- insert into students (id,name,age,city) values
+-- (1,"neha",20,"hyb"),
+-- (2,"chethu",20,"hyb"),
+-- (3,"bhav",22,"banglore"),
+-- (4,"ferhat",32,"bolu");
+
+-- insert into students values (5,"asli",30,"bolu");
+
+-- select id,name from students;
+
+-- select distinct city from students;
+
+-- create table students(
+-- id int primary key,
+-- name varchar(50),
+-- age int not null,
+-- city varchar(20),
+-- marks int
+-- );
+
+-- insert into students (id,name,age,city,marks) values
+-- (1,"neha",20,"hyb",99),
+-- (2,"chethu",20,"hyb",98),
+-- (3,"bhav",22,"banglore",92),
+-- (4,"ferhat",32,"bolu",88);
+
+-- insert into students values (5,"asli",30,"bolu",92);
+
+-- select * from students
+-- where age>=22;
+
+-- select * from students
+-- where city="bolu";
+
+-- select * from students
+-- where age>=22 and city="bolu";
+
+-- select * from students
+-- where marks+5>100;
+
+-- select * from students
+-- where marks=88;
+
+-- select * from students
+-- where marks!=98;
+
+
+
+
+
+
